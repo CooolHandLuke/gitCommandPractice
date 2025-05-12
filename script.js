@@ -33,11 +33,11 @@ const levels = [
       },
     ],
     bgColor: "#181c20",
+    bodyBg: "#F5F5F5"
   },
   {
     instructions: `
-      <p>Level 2: The background color has changed! Repeat the git commands, but your <strong>commit message must mention the background color change</strong>.<br>
-      <em>Hint: Your commit message should include the words "background" and "color" or "colors".</em></p>
+      <p>Level 2: The background color has changed! Repeat the git commands, but your <strong>commit message must mention the background color change</strong>.</p>
       <ol>
         <li><code>git add .</code></li>
         <li><code>git commit -m "your message about the background color change"</code></li>
@@ -60,6 +60,7 @@ const levels = [
       },
     ],
     bgColor: "#2d3a4a",
+    bodyBg: "#4B0082"
   },
 ];
 
@@ -68,6 +69,7 @@ function setLevel(lvl) {
   stage = 0;
   instructions.innerHTML = levels[level - 1].instructions;
   consoleDiv.style.background = levels[level - 1].bgColor;
+  document.body.style.backgroundColor = levels[level - 1].bodyBg;
 }
 
 setLevel(1);
