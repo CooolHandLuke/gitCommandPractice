@@ -1,5 +1,5 @@
 body {
-    background-color: #1e1e1e;
+    background-color: #F5F5F5;
     color: #d4d4d4;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
@@ -17,35 +17,99 @@ body {
   h1 {
     color: #4ec9b0;
   }
-  
+
 
 #console {
-  background: #000;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  text-align: left;
-  min-height: 200px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
-  height: 300px; /* Set a fixed height for demonstration */
+  height: 300px;
+  background: #181c20;
+  border-radius: 10px;
+  border: 1.5px solid #222;
+  overflow: hidden;
+}
+
+#terminal-header {
+  background: #23272e;
+  color: #b5bd68;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#terminal-header .repo {
+  color: #61afef;
+}
+
+#terminal-header .branch {
+  color: #e06c75;
 }
 
 #output {
-  white-space: pre-wrap;
-  margin-bottom: 10px;
   flex: 1;
   overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #d4d4d4;
+  font-size: 1rem;
+}
+
+#command-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #23272e;
+  padding: 10px 16px;
+  border-top: 1px solid #222;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+#command-line .repo {
+  color: #61afef;
+  font-weight: bold;
+}
+
+#command-line .branch {
+  color: #e06c75;
+  font-weight: bold;
+}
+
+#command-line .prompt {
+  color: #b5bd68;
+}
+
+#input-line {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-height: unset;
+}
+
+.prompt {
+  color: #b5bd68;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-right: 8px;
 }
 
 #input {
-  width: 100%;
-  padding: 10px;
+  flex: 1 1 200px;
+  min-width: 180px;
+  padding: 6px 8px;
   border: none;
   outline: none;
-  background: #1e1e1e;
+  background: #23272e;
   color: #d4d4d4;
-  border-top: 1px solid #333;
-  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 4px;
 }

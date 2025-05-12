@@ -21,17 +21,28 @@ const steps = [
 input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     const userInput = input.value.trim();
-    output.innerHTML += `\n$ ${userInput}`;
 
+    // Show the command line as a new div
+    const commandDiv = document.createElement("div");
+    commandDiv.innerHTML = `<span class="repo">gitCommandPractice</span> <span class="branch">git:(main)</span> <span class="prompt">$</span> ${userInput}`;
+    commandDiv.className = "command-line-output";
+    output.appendChild(commandDiv);
+
+    // Show feedback as a new div
+    let feedback = "";
     if (stage < steps.length && steps[stage].match.test(userInput)) {
-      output.innerHTML += `\n${steps[stage].response}`;
+      feedback = steps[stage].response;
       stage++;
       if (stage === steps.length) {
-        output.innerHTML += `\n🎉 All done! You successfully simulated a Git push.`;
+        feedback += "<br>🎉 All done! You successfully simulated a Git push.";
       }
     } else {
-      output.innerHTML += `\n❌ Invalid command or wrong order. Try again.`;
+      feedback = "❌ Invalid command or wrong order. Try again.";
     }
+    const feedbackDiv = document.createElement("div");
+    feedbackDiv.className = "feedback";
+    feedbackDiv.innerHTML = feedback;
+    output.appendChild(feedbackDiv);
 
     input.value = "";
     output.scrollTop = output.scrollHeight;
