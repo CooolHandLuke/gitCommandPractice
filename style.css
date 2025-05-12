@@ -27,6 +27,7 @@ body {
   border-radius: 10px;
   border: 1.5px solid #222;
   overflow: hidden;
+  transition: background 0.5s;
 }
 
 #terminal-header {
