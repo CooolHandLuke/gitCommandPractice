@@ -58,6 +58,15 @@ body {
   justify-content: flex-end;
   color: #d4d4d4;
   font-size: 1rem;
+  text-align: left; /* Ensure output is left justified */
+  align-items: flex-start; /* Align children to the left */
+}
+
+.command-line-output,
+.feedback {
+  text-align: left;
+  width: 100%;
+  word-break: break-word;
 }
 
 #command-line {
