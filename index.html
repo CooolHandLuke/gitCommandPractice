@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Console Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>💻 Git Practice Console</h1>
+      <p>Type these commands in order to simulate pushing code to GitHub:</p>
+      <ol>
+        <li><code>git add .</code></li>
+        <li><code>git commit -m "your message here"</code></li>
+        <li><code>git push</code></li>
+      </ol>
+      <div id="console">
+        <div id="output"></div>
+        <input
+          type="text"
+          id="input"
+          placeholder="Type your command here..."
+          autofocus
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
